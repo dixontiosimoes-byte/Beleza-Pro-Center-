@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guia Prático da Gastrite — Apenas 69 MT</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Guia Prático da Gastrite — Apenas 69 MT" />
+  <meta property="og:description" content="Guia simples e adaptado a Moçambique para controlar a gastrite: alimentos, hábitos e alívio rápido." />
+  <meta property="og:image" content="https://source.unsplash.com/1200x630/?stomach,health" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Product structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Guia Prático da Gastrite",
+    "description": "Guia simples e adaptado à realidade de Moçambique para controlar a gastrite: alimentos, hábitos e alívio rápido.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MZN",
+      "price": "69",
+      "url": "https://wa.me/258835127096"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts (classic, readable) -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* classic palette: navy, cream, soft gold */
+      --bg-start: #f7f3ec;     /* warm cream */
+      --bg-end:   #eef3f8;     /* very light blue */
+      --card: #ffffff;
+      --text: #0b1b2b;         /* deep navy */
+      --muted: #5b6b7a;
+      --accent: #0f3b66;       /* classic navy */
+      --accent-2: #b78a2a;     /* warm gold */
+      --radius: 14px;
+      --maxw: 1100px;
+      --shadow: 0 14px 40px rgba(11,27,44,0.08);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:18px;
+    }
+
+    .wrap{max-width:var(--maxw);margin:18px auto;padding:0 18px}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:26px;
+      align-items:start;
+    }
+
+    /* HERO */
+    .hero{
+      border-radius:12px;
+      overflow:hidden;
+      position:relative;
+      height:400px;
+      display:block;
+      background: linear-gradient(90deg, rgba(15,59,102,0.06), rgba(183,138,42,0.02));
+      border: 1px solid rgba(11,27,44,0.04);
+    }
+    .hero img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(0.98) saturate(0.95)}
+    .badge{
+      position:absolute;left:20px;top:20px;
+      background:var(--accent-2);color:#fff;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;box-shadow:0 6px 16px rgba(183,138,42,0.12)
+    }
+
+    header h1{
+      font-family: "Merriweather", serif;
+      font-weight:700;
+      font-size:30px;
+      margin:18px 0 8px 0;
+      color:var(--accent);
+      line-height:1.06;
+    }
+    header p.lead{
+      color:var(--muted);
+      margin:0 0 14px 0;
+      font-size:16px;
+      max-width:80ch;
+    }
+
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .pill{background:#f1f6ff;padding:8px 10px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px;border:1px solid rgba(15,59,102,0.06)}
+
+    /* benefits */
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+    .benef{
+      display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#ffffff,#fbfbff);
+      padding:12px;border-radius:10px;border:1px solid rgba(11,27,44,0.04)
+    }
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent-2);margin-top:6px;box-shadow:0 4px 10px rgba(183,138,42,0.12)}
+    .benef p{margin:0;font-size:15px;color:var(--text);font-weight:600}
+
+    /* price card */
+    .price-card{
+      background: linear-gradient(180deg, #fffdfa, #fbfdff);
+      border-radius:12px;padding:20px;border:1px solid rgba(11,27,44,0.05);
+      text-align:center;position:sticky;top:22px;
+      box-shadow: 0 8px 28px rgba(11,27,44,0.04);
+    }
+    .label{font-weight:700;color:var(--muted);font-size:13px}
+    .price{
+      font-size:48px;font-weight:900;color:var(--accent);margin:8px 0 6px 0;
+      letter-spacing:0.6px;
+    }
+    .price small{display:block;font-size:14px;color:var(--muted);font-weight:600;margin-top:6px}
+
+    .cta{
+      display:inline-flex;align-items:center;gap:12px;justify-content:center;margin-top:14px;
+      text-decoration:none;background:var(--accent);color:#fff;padding:12px 18px;border-radius:12px;font-weight:800;
+      box-shadow:0 14px 30px rgba(15,59,102,0.12);transition:transform .12s,box-shadow .12s,opacity .12s;
+    }
+    .cta:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(15,59,102,0.18)}
+    .cta svg{width:18px;height:18px;flex:0 0 18px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.06))}
+
+    .tiny{font-size:13px;color:var(--muted);margin-top:10px;text-align:left}
+
+    .scarcity{background:#fff7f0;border:1px solid #ffe5cc;padding:10px;border-radius:10px;color:#7a2b00;font-weight:800;margin-top:12px}
+
+    .tests{margin-top:18px}
+    .test{display:flex;gap:12px;margin:12px 0;padding:12px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(11,27,44,0.04)}
+    .test img{width:56px;height:56px;border-radius:999px;object-fit:cover}
+    .test p{margin:0;font-size:14px;color:var(--text)}
+
+    details{margin:10px 0;padding:12px;border-radius:8px;background:#fbfbfb;border:1px solid rgba(11,18,24,0.03)}
+    summary{font-weight:700;cursor:pointer;font-size:15px}
+
+    .footer{font-size:13px;color:var(--muted);text-align:center;margin-top:18px}
+
+    /* mobile */
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr;gap:18px}
+      .price-card{position:relative;top:0}
+      .benefits{grid-template-columns:1fr}
+      .hero{height:260px}
+      header h1{font-size:22px}
+    }
+
+    /* bottom sticky CTA for mobile */
+    .bottom-cta{
+      display:none;
+      position:fixed;left:12px;right:12px;bottom:12px;background:linear-gradient(90deg,var(--accent),#2b7bb8);
+      color:#fff;padding:12px;border-radius:12px;box-shadow:0 20px 40px rgba(11,27,44,0.12);z-index:60;
+      justify-content:space-between;align-items:center;gap:12px;
+    }
+    .bottom-cta .btn{font-weight:800;text-decoration:none;color:#fff;padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.06)}
+    .timer{font-weight:800;font-size:14px}
+    @media (max-width:740px){ .bottom-cta{display:flex} }
+  </style>
+</head>
+<body>
+  <main class="wrap" aria-labelledby="page-title">
+    <div class="card" role="main">
+      <div class="grid">
+        <!-- LEFT: HERO + COPY -->
+        <div>
+          <div class="hero" aria-hidden="false">
+            <span class="badge">Oferta local • Moçambique</span>
+            <!-- imagem limpa e relevante; substitua por imagem própria se preferir -->
+            <img src="https://source.unsplash.com/1600x1066/?stomach,health,calm" alt="Pessoa tocando a região do estômago, simbolizando desconforto e alívio">
+          </div>
+
+          <header style="margin-top:18px">
+            <h1 id="page-title">Guia Prático da Gastrite — Alívio real em passos simples</h1>
+            <p class="lead">Um guia direto, adaptado à vida em Moçambique. Dicas práticas, alimentos locais que ajudam, técnicas de alivio imediato e suporte por WhatsApp — tudo por apenas 69 MT.</p>
+          </header>
+
+          <div class="meta" aria-hidden="true">
+            <div class="pill">Leitura rápida • Fácil de aplicar</div>
+            <div class="pill">Suporte via WhatsApp</div>
+            <div class="pill">Pagamento local aceito</div>
+          </div>
+
+          <div style="margin-top:18px">
+            <h2 style="font-size:18px;margin-bottom:8px">O que você encontra neste guia</h2>
+            <div class="benefits" role="list">
+              <div class="benef" role="listitem">
+                <div class="dot" aria-hidden="true"></div>
+                <p><strong>Alimentos que ajudam</strong><br>Opções locais, acessíveis e fáceis de preparar.</p>
+              </div>
+              <div class="benef" role="listitem">
+                <div class="dot" aria-hidden="true"></div>
+                <p><strong>Gatilhos a evitar</strong><br>Identifique o que piora a sua gastrite e como reduzir exposições.</p>
+              </div>
+              <div class="benef" role="listitem">
+                <div class="dot" aria-hidden="true"></div>
+                <p><strong>Técnicas de alívio</strong><br>Passos rápidos que você pode fazer em casa para diminuir a dor.</p>
+              </div>
+              <div class="benef" role="listitem">
+                <div class="dot" aria-hidden="true"></div>
+                <p><strong>Rotina adaptada</strong><br>Hábitos simples pensados na realidade moçambicana.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials -->
+          <section class="tests" aria-labelledby="testimonials-title" style="margin-top:20px">
+            <h2 id="testimonials-title" style="font-size:18px;margin-bottom:10px">O que dizem outros leitores</h2>
+
+            <div class="test" aria-live="polite">
+              <img src="https://source.unsplash.com/120x120/?woman-smile" alt="Foto de Anabela, leitora">
+              <div>
+                <p><strong>Anabela, Maputo</strong></p>
+                <p>"Segui as dicas e tive menos queimação em poucos dias. Atendimento pelo WhatsApp foi muito útil."</p>
+              </div>
+            </div>
+
+            <div class="test" aria-live="polite">
+              <img src="https://source.unsplash.com/120x120/?man-smile" alt="Foto de João, leitor">
+              <div>
+                <p><strong>João, Beira</strong></p>
+                <p>"Conteúdo prático e simples. Usei com ingredientes locais e funcionou bem."</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- FAQ -->
+          <section style="margin-top:18px" aria-labelledby="faq-title">
+            <h2 id="faq-title" style="font-size:18px;margin-bottom:8px">Perguntas frequentes</h2>
+
+            <details>
+              <summary>Como recebo o guia após pagar?</summary>
+              <div style="margin-top:8px">Combinamos o pagamento pelo WhatsApp (M-Pesa, transferência, etc.). Assim que o pagamento for confirmado enviamos o PDF imediatamente.</div>
+            </details>
+
+            <details>
+              <summary>Posso tirar dúvidas depois de comprar?</summary>
+              <div style="margin-top:8px">Sim — suporte por WhatsApp incluído para ajudar a aplicar as recomendações.</div>
+            </details>
+
+            <details>
+              <summary>O guia substitui consulta médica?</summary>
+              <div style="margin-top:8px">Não. O guia oferece orientações práticas; para sintomas graves procure um profissional de saúde.</div>
+            </details>
+          </section>
+
+          <div class="footer" style="margin-top:18px">
+            © Guia Prático da Gastrite — Conteúdo informativo (não substitui consulta médica)
+          </div>
+        </div>
+
+        <!-- RIGHT: PRICE + CTA -->
+        <aside class="price-card" aria-labelledby="price-title">
+          <div class="label" id="price-title">Preço especial</div>
+          <div class="price">69 MT</div>
+          <div class="tiny">Oferta por tempo limitado</div>
+
+          <div class="scarcity" id="countdown" role="status" aria-live="polite" style="margin-top:12px;font-size:15px">
+            Oferta termina em: <strong id="timer">Carregando...</strong>
+          </div>
+
+          <!-- WhatsApp CTA (number 258835127096) -->
+          <a
+            href="https://wa.me/258835127096?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Guia%20Pr%C3%A1tico%20da%20Gastrite%20(69%20MT).%20Meu%20nome%3A%20%5Bseu%20nome%5D%20%E2%80%94%20Moro%20em%20%5Bcidade%5D.%20Como%20posso%20efectuar%20o%20pagamento%3F"
+            class="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Comprar o Guia por WhatsApp — 69 MT"
+          >
+            <!-- WhatsApp icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#fff" d="M20.52 3.48A11.93 11.93 0 0012 .5 11.94 11.94 0 003.48 12c0 2.11.55 4.16 1.6 5.98L3 21l2.56-1.3A11.93 11.93 0 0012 23.5c6.62 0 11.94-5.32 11.94-11.94 0-3.19-1.24-6.18-3.42-8.08z"/>
+              <path d="M16.22 13.12c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.13-.64.14-.19.28-.74.91-.91 1.1-.17.19-.35.21-.63.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.37-1.64-1.53-1.92-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.47.09-.19.05-.36-.02-.51-.07-.15-.64-1.53-.88-2.1-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.77.36-.26.29-1 1-1 2.44 0 1.43 1.03 2.81 1.17 3.01.14.19 2.03 3.11 4.92 4.35 0 0 .27.12.5.06.23-.06 1.66-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.12-.25-.19-.53-.33z" fill="#fff"/>
+            </svg>
+            <span>Comprar por 69 MT — WhatsApp</span>
+          </a>
+
+          <div class="tiny">Ao clicar abre o WhatsApp com mensagem pronta. Combinamos o pagamento e enviamos o guia em PDF.</div>
+
+          <div style="margin-top:14px;text-align:left">
+            <strong style="font-size:13px">O que está incluído</strong>
+            <ul style="padding-left:18px;margin:8px 0 0 0;color:var(--text)">
+              <li>Guia em PDF — passo a passo</li>
+              <li>Lista de alimentos e planos simples</li>
+              <li>Suporte por WhatsApp para dúvidas</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom sticky CTA (mobile) -->
+  <div class="bottom-cta" role="dialog" aria-live="polite" aria-label="Chamar no WhatsApp">
+    <div style="display:flex;gap:10px;align-items:center">
+      <div style="font-size:13px">Guia por <strong style="font-size:16px">69 MT</strong></div>
+      <div class="timer" id="bottom-timer" aria-hidden="true"></div>
+    </div>
+    <a href="https://wa.me/258835127096?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Guia%20Pr%C3%A1tico%20da%20Gastrite%20(69%20MT).%20Meu%20nome%3A%20%5Bseu%20nome%5D%20%E2%80%94%20Moro%20em%20%5Bcidade%5D.%20Como%20posso%20efectuar%20o%20pagamento%3F" class="btn" style="text-decoration:none;color:#fff;font-weight:800">Comprar</a>
+  </div>
+
+  <script>
+    // Countdown: offer expires in 48 hours from first visit (client-side)
+    (function(){
+      const key = 'gv_gastrite_offer_deadline_v2';
+      let deadline = localStorage.getItem(key);
+      if (!deadline) {
+        deadline = Date.now() + 48 * 60 * 60 * 1000;
+        localStorage.setItem(key, deadline);
+      } else {
+        deadline = parseInt(deadline, 10);
+      }
+
+      function updateTimer() {
+        const now = Date.now();
+        let diff = Math.max(0, deadline - now);
+
+        const days = Math.floor(diff / (24*60*60*1000));
+        diff -= days * 24*60*60*1000;
+        const hours = Math.floor(diff / (60*60*1000));
+        diff -= hours * 60*60*1000;
+        const mins = Math.floor(diff / (60*1000));
+        diff -= mins * 60*1000;
+        const secs = Math.floor(diff / 1000);
+
+        const parts = [];
+        if (days > 0) parts.push(days + 'd');
+        parts.push(String(hours).padStart(2,'0') + 'h');
+        parts.push(String(mins).padStart(2,'0') + 'm');
+        parts.push(String(secs).padStart(2,'0') + 's');
+
+        const text = parts.join(' ');
+        const el = document.getElementById('timer');
+        const el2 = document.getElementById('bottom-timer');
+        if (el) el.textContent = text;
+        if (el2) el2.textContent = text;
+
+        if (deadline - now <= 0) {
+          const scarcity = document.getElementById('countdown');
+          if (scarcity) scarcity.textContent = 'Promoção terminada — preço pode aumentar';
+          clearInterval(intervalId);
+        }
+      }
+
+      updateTimer();
+      const intervalId = setInterval(updateTimer, 1000);
+    })();
+
+    // Show bottom CTA on mobile
+    (function(){
+      const bottom = document.querySelector('.bottom-cta');
+      if (!bottom) return;
+      function check(){
+        bottom.style.display = window.innerWidth <= 740 ? 'flex' : 'none';
+      }
+      check();
+      window.addEventListener('resize', check);
+    })();
+  </script>
+</body>
+</html>
